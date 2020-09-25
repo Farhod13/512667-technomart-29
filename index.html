@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -26,31 +25,31 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="">Главная</a>
+            <a class="navigation-link navigation-header" href="">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="">Компания</a>
+            <a class="navigation-link navigation-header" href="">Компания</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог</a>
+            <a class="navigation-link navigation-header" href="catalog.html">Каталог</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="">Новости</a>
+            <a class="navigation-link navigation-header" href="">Новости</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="">Спецпредложения</a>
+            <a class="navigation-link navigation-header" href="">Спецпредложения</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="">Доставка</a>
+            <a class="navigation-link navigation-header" href="">Доставка</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="">Контакты</a>
+            <a class="navigation-link navigation-header" href="">Контакты</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 hidden>Интернет-магазин «Техномарт»</h1>
+      <h1 class="shop-title visually-hidden">Интернет-магазин «Техномарт»</h1>
       <section class="features">
         <h2 class="feature-title">Материалы</h2>
         <a class="feature-link" href="">на любой вкус</a>
@@ -66,7 +65,7 @@
       <section class="sliders">
         <h2 class="slider-title">Перфораторы</h2>
         <p class="slider-content">Настоящие мужские игрушки</p>
-        <a class="slider-link" href="">Открыть каталог</a>
+        <a class="slider-link" href="catalog.html">Открыть каталог</a>
       </section>
       <section class="discounts">
         <h2 class="discount-title">Скидки 50%</h2>
@@ -78,7 +77,7 @@
       </section>
       <section class="products">
         <div class="populars">
-          <h2 class="products-title">Популярные товары:</h2>
+          <h2 class="popular-title">Популярные товары:</h2>
           <a class="all-products-link" href="">Все популярные товары</a>
         </div>
         <ul class="product-list">
@@ -103,7 +102,7 @@
           <li class="product-item">
             <a class="product-link" href=""><img src="https://via.placeholder.com/184x164" alt="Перфоратор «BOSCH BFG 2000»"></a>
             <h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
-            <p class="product-price-old">&shy;</p>
+            <p class="product-price-old visually-hidden">нет цены</p>
             <p class="product-price-new">12500 р.</p>
           </li>
         </ul>
@@ -128,7 +127,7 @@
         <h2 class="service-title">Сервисы</h2>
         <p class="service-content">Хороший интернет-магазин отличается от плохого не только ценами! <br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="service-list">
-          <li class="service-item">Доставка</li>
+          <li class="service-item service-active">Доставка</li>
           <li class="service-item">Гарантия</li>
           <li class="service-item">Кредит</li>
         </ul>
@@ -160,17 +159,17 @@
       <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
       <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
       <ul class="navigation-list">
-        <li class="navigation-item"><a class="navigation-link" href="">Компания</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="">Новости</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="">Доставка</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="">Контакты</a></li>
+        <li class="navigation-item"><a class="navigation-link navigation-footer" href="">Компания</a></li>
+        <li class="navigation-item"><a class="navigation-link navigation-footer" href="">Новости</a></li>
+        <li class="navigation-item"><a class="navigation-link navigation-footer" href="catalog.html">Каталог</a></li>
+        <li class="navigation-item"><a class="navigation-link navigation-footer" href="">Доставка</a></li>
+        <li class="navigation-item"><a class="navigation-link navigation-footer" href="">Контакты</a></li>
       </ul>
       <ul class="navigation-list">
-        <li class="navigation-item"><a class="navigation-link" href="">Материалы</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="">Техника</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="">Инструмент</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="">Спецпредложения</a></li>
+        <li class="navigation-item"><a class="navigation-link footer-menu" href="">Материалы</a></li>
+        <li class="navigation-item"><a class="navigation-link footer-menu" href="">Техника</a></li>
+        <li class="navigation-item"><a class="navigation-link footer-menu" href="">Инструмент</a></li>
+        <li class="navigation-item"><a class="navigation-link footer-menu" href="">Спецпредложения</a></li>
       </ul>
       <p class="copyright-content">&copy; 2010–2019 Компания «Техномарт» <br>Все права защищены</p>
       <ul class="social-list">
@@ -190,8 +189,8 @@
       <p class="developer-content">Разработано — <br>
         <a class="developer-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
       </p>
+      <p class="author-courses visually-hidden">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a class="author-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
     </footer>
-    <p hidden>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    
   </body>
 </html>
