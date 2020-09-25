@@ -88,6 +88,10 @@
   --red-button-hover: #ca2c37;
   --red-button-active: #ba2732;
   
+  --paginator-border: #e5e5e5;
+  --paginator-hover: #c5c5c5;
+  --paginator-active: #ee3643;
+  
 }
 
 /* Global */
@@ -381,6 +385,7 @@ img {
   color: var(--black);
   /*mix-blend-mode: normal;*/
   opacity: 0.3;
+  text-decoration-line: underline;
 }
 
 .filter-button {
@@ -399,10 +404,45 @@ img {
   color: var(--black);
 }
 
+.filter-link:hover {
+  /*color: var(--black);*/
+  opacity: 1.0;
+}
+
+.filter-link:active {
+  color: var(--basic-red);
+  text-decoration-line: none;
+}
+
 .paginator-item {
   width: 38px;
-  min-height: 38px;
+  height: 38px;
+  text-align: center;
+  border: 1px solid var(--paginator-border);
+  box-sizing: border-box;
+  border-radius: 2px;
+  background: color: var(--white);
+}
+
+.paginator-list > .paginator-item-last {
+  min-width: 140px;
+}
+
+.paginator-list > .paginator-active {
+  border: 1px solid var(--paginator-active);
+  background: var(--basic-red);
+}
+
+.paginator-active > .paginator-link {
   color: var(--white);
+}
+
+.paginator-item:hover {
+  border: 1px solid var(--paginator-hover);
+}
+
+.paginator-item:active {
+  border: 1px solid var(--paginator-active);
 }
 
 /* Features, Discounts, Deliveries */
@@ -494,6 +534,14 @@ img {
   text-transform: uppercase;
   color: var(--white);
   background: var(--basic-red);
+}
+
+.slider-link:hover {
+  background: var(--red-button-hover);
+}
+
+.slider-link:active {
+  background: var(--red-button-active);
 }
 
 .products,
@@ -633,23 +681,6 @@ img {
 .contact-map {
   width: 300px;
   height: auto;
-}
-
-.slider-link:hover {
-  background: var(--red-button-hover);
-}
-
-.filter-link:hover {
-  /*color: var(--black);*/
-  opacity: 1.0;
-}
-
-.slider-link:active {
-  background: var(--red-button-active);
-}
-
-.filter-link:active {
-  color: var(--basic-red);
 }
 
 /* Footer */
