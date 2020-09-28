@@ -411,6 +411,22 @@ img {
   list-style: none;
 }
 
+.breadcrumbs-list {
+  padding-left: 15px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: 80px 110px 110px;
+  align-content: left-center;
+  list-style-image: url("https://via.placeholder.com/13x13");
+}
+
+.paginator-list {
+  width: 275px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: left-center;
+}
+
 .breadcrumbs-item {
   background: var(--white);
 }
@@ -425,7 +441,25 @@ img {
   color: var(--black);
 }
 
-.filter-menu,
+.main-filter {
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: 240px 700px;
+}
+
+.filter-menu {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 120px 100px 100px 140px 140px 120px;
+  align-content: center;
+}
+
+.filter-menu a {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.filter-content,
 .filter-button,
 .filter-link,
 .breadcrumbs-link,
@@ -438,7 +472,7 @@ img {
   text-transform: uppercase;
 }
 
-.filter-menu,
+.filter-content,
 .filter-button,
 .filter-link,
 .breadcrumbs-link,
@@ -458,8 +492,13 @@ img {
   height: 38px;
 }
 
-.filter-brands > label,
-.filter-power > label {
+.filter-brands,
+.filter-power {
+  padding-bottom: 20px;
+}
+
+.filter-brands > div,
+.filter-power > div {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: normal;
@@ -467,6 +506,11 @@ img {
   line-height: 19px;
   text-transform: uppercase;
   color: var(--black);
+}
+
+.filter-brands > div > label,
+.filter-power > div > label {
+  padding-left: 5px;
 }
 
 .filter-link:hover {
@@ -675,7 +719,20 @@ img {
   height: auto;
 }
 
-.product-list,
+.products .product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: start;
+}
+
+.select-products .product-list {
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-content: start;
+}
+
 .brand-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
