@@ -118,17 +118,38 @@ img {
   height: auto;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /* Header */
 
 .page-header {
+  margin-bottom: 60px;
+}
+
+.navigation {
+  display: grid;
   background: var(--basic-background);
 }
 
 /* Bar */
 
 .header-bar {
-  min-width: auto;
+  min-width: 940px;
   height: 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-self: center;
   color: var(--white);
   background: var(--special-background);
 }
@@ -200,7 +221,10 @@ img {
 /* Head */
 
 .header {
-  min-width: 940px;
+  width: 940px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: center;
 }
 
 .header-content {
@@ -270,15 +294,40 @@ img {
   color: var(--basic-greylight);
 }
 
-.navigation-list,
 .product-list,
 .service-list,
 .social-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+/* Navigation */
+
+.navigation-header {
+  max-width: 940px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content max-content max-content;
+  gap: 50px;
+  justify-content: center;
+}
+
+.navigation-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .navigation-list {
-  background: var(--special-bluedark);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*background: var(--special-bluedark);*/
 }
 
 .navigation-item {
@@ -293,40 +342,46 @@ img {
 }
 
 .navigation-header {
+  width: 940px;
+  justify-self: center;
+  background: var(--special-bluedark);
+}
+
+.navigation-header .navigation-link {
   color: var(--white);
 }
 
-.navigation-footer {
+.navigation-footer .navigation-link {
   color: var(--basic-background);
 }
 
-.footer-menu {
+.footer-menu .navigation-link {
   color: var(--special-yellowlight);
 }
 
-.navigation-header:hover {
+.navigation-header .navigation-link:hover {
   background: var(--special-background);
   box-shadow: inset 0px -5px 0px var(--special-background);
 }
 
-.navigation-footer:hover,
-.footer-menu:hover {
+.navigation-footer .navigation-link:hover,
+.footer-menu .navigation-link:hover {
   text-decoration-line: underline;
 }
 
-.navigation-header:active {
+.navigation-header .navigation-link:active {
   opacity: 0.5;
   background: var(--active-navigation);
   box-shadow: inset 0px -5px 0px var(--special-background);
 }
 
-.navigation-footer:active {
+.navigation-footer .navigation-link:active {
   color: var(--basic-background);
   /*mix-blend-mode: normal;*/
   opacity: 0.5;
 }
 
-.footer-menu:active {
+.footer-menu .navigation-link:active {
   color: var(--special-yellowlight);
   /*mix-blend-mode: normal;*/
   opacity: 0.5;
@@ -339,10 +394,20 @@ img {
   background: var(--white);
 }
 
+/* Container */
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
 /* Breadcrumbs, Filter, Paginator */
 
 .breadcrumbs-list,
 .paginator-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -477,15 +542,15 @@ img {
   background: rgba(255, 255, 255, 0.3); /* White */
 }
 
-.features:nth-child(2) {
+.materials {
   background: var(--special-yellow);
 }
 
-.features:nth-child(3) {
+.instruments {
   background: var(--special-blue);
 }
 
-.features:nth-child(4) {
+.technics {
   background: var(--special-lilac);
 }
 
@@ -509,7 +574,43 @@ img {
   background: rgba(169, 169, 169, 0.3); /* Greydark */
 }
 
-/* Sliders, Products, Brands, Services, Contacts, Articles */
+/* Grid */
+
+.main-features {
+  width: 940px;
+  display: grid;
+  grid-template-areas:
+    "materials  instruments technics"
+    "sliders    sliders     discounts"
+    "sliders    sliders     deliveries";
+ gap: 20px;
+}
+
+.materials {
+  grid-area: materials;
+}
+
+.instruments {
+  grid-area: instruments;
+}
+
+.technics {
+  grid-area: technics;
+}
+
+.discounts {
+  grid-area: discounts;
+}
+
+.deliveries {
+  grid-area: deliveries;
+}
+
+.sliders {
+  grid-area: sliders;
+}
+
+/* Sliders */
 
 .sliders {
   width: 620px;
@@ -550,18 +651,39 @@ img {
   background: var(--basic-red);
 }
 
-.slider-link:hover {
+.slider-link:hover,
+.all-products-link:hover,
+.all-brands-link:hover,
+.company-link:hover,
+.contact-link:hover {
   background: var(--red-button-hover);
 }
 
-.slider-link:active {
+.slider-link:active,
+.all-products-link:active,
+.all-brands-link:active,
+.company-link:active,
+.contact-link:active {
   background: var(--red-button-active);
 }
+
+/* Products, Brands, Services, Contacts, Articles */
 
 .products,
 .brands {
   width: 940px;
   height: auto;
+}
+
+.product-list,
+.brand-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: start;
+}
+
+.populars {
+  background: var(--redlight);
 }
 
 .popular-title,
@@ -632,6 +754,13 @@ img {
   background-color: var(--basic-background);
 }
 
+.main-services {
+  width: 940px;
+  /*height: 261px;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .service-title,
 .company-title,
 .contact-title,
@@ -684,6 +813,12 @@ img {
   box-shadow: 0px 1px 0px var(--special-background), inset 0px 1px 0px var(--special-shadow);
 }
 
+.main-bottom {
+  min-width: 940px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
 .partner-list {
   list-style-image: url("https://via.placeholder.com/25x2");
 }
@@ -707,7 +842,23 @@ img {
 .page-footer {
   width: auto;
   min-height: 300px;
+  /*background: var(--special-bluedark);*/
+}
+
+.footer-top {
+  /*width: 940px;*/
+  display: grid;
+  grid-template-columns: 2fr 3fr;
   background: var(--special-bluedark);
+  /*justify-self: center;*/
+}
+
+.footer-bottom {
+  /*width: 940px;*/
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  background: var(--special-background);
+  /*justify-self: center;*/
 }
 
 .footer-address,
@@ -730,6 +881,21 @@ img {
   color: var(--white);
 }
 
+.social-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: start;
+}
+
+.footer-author {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.social-content {
+  color: var(--white);
+}
+
 .feedback-link,
 .developer-link {
   font-family: "Cuprum";
@@ -742,10 +908,6 @@ img {
 .feedback-link,
 .developer-link {
   color: var(--special-yellowlight);
-}
-
-.populars {
-  background: var(--redlight);
 }
 
 .feedback-link:hover,
