@@ -13,9 +13,11 @@
         <div class="container">
           <div class="bar-navigation">
             <a class="header-logo" href="index.html">Техномарт</a>
-            <input class="search-field" type="search" name="search" placeholder="Поиск:">
-            <a class="bookmark-link" href="">Закладки: <span>0</span></a>
-            <a class="basket-link basket-active" href="">Корзина: <span>10</span></a>
+            <label class="search-wrapper">
+              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff" opacity="0.3"/></svg><input class="search-field" type="search" name="search" placeholder="Поиск:">
+            </label>
+            <a class="bookmark-link" href=""><svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 15c0 .55-.37.74-.82.43l-5.36-3.77a1.54 1.54 0 00-1.64 0L.82 15.43c-.45.31-.82.12-.82-.43V1a1 1 0 011-1h12a1 1 0 011 1v14z" fill="#fff" opacity="0.3"/></svg>Закладки: <span>0</span></a>
+            <a class="basket-link basket-active" href=""><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#fff" opacity="0.3"/></svg>Корзина: <span>10</span></a>
             <a class="order-link" href="">Оформить заказ</a>
           </div>
         </div>
@@ -107,6 +109,10 @@
               <h2 class="select-title visually-hidden">Избранные товары</h2>
               <ul class="product-list">
                 <li class="product-item">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 6000» работает от аккумулятора"></a>
                   </div>
@@ -115,6 +121,10 @@
                   <p class="new-price">25500 р.</p>
                 </li>
                 <li class="product-item">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 6000» работает от аккумулятора"></a>
                   </div>
@@ -122,7 +132,11 @@
                   <p class="old-price">30500 р.</p>
                   <p class="new-price">25500 р.</p>
                 </li>
-                <li class="product-item">
+                <li class="product-item new-action">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 6000» работает от аккумулятора"></a>
                   </div>
@@ -130,7 +144,11 @@
                   <p class="old-price">30500 р.</p>
                   <p class="new-price">25500 р.</p>
                 </li>
-                <li class="product-item">
+                <li class="product-item new-action">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 3000» работает от аккумулятора"></a>
                   </div>
@@ -139,6 +157,10 @@
                   <p class="new-price">15500 р.</p>
                 </li>
                 <li class="product-item">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 6000» работает от аккумулятора"></a>
                   </div>
@@ -146,15 +168,23 @@
                   <p class="old-price">30500 р.</p>
                   <p class="new-price">25500 р.</p>
                 </li>
-                <li class="product-item">
+                <li class="product-item new-action">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 2000» работает от аккумулятора"></a>
                   </div>
                   <h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
-                  <p class="old-price visually-hidden">нет цены</p>
+                  <p class="old-price hidden-content">нет цены</p>
                   <p class="new-price">12500 р.</p>
                 </li>
-                <li class="product-item">
+                <li class="product-item new-action">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 3000» работает от аккумулятора"></a>
                   </div>
@@ -163,6 +193,10 @@
                   <p class="new-price">15500 р.</p>
                 </li>
                 <li class="product-item">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 6000» работает от аккумулятора"></a>
                   </div>
@@ -170,12 +204,16 @@
                   <p class="old-price">30500 р.</p>
                   <p class="new-price">25500 р.</p>
                 </li>
-                <li class="product-item">
+                <li class="product-item new-action">
+                  <div class="card-wrapper">
+                    <a class="product-basket-link" href="">Купить</a>
+                    <a class="product-bookmark-link" href="">В закладки</a>
+                  </div>
                   <div class="image-wrapper">
                     <a class="product-link" href=""><img src="img/snippet-18927.jpg" width="127" height="112" alt="Перфоратор «Bosch BFG 2000» работает от аккумулятора"></a>
                   </div>
                   <h3 class="product-title">Перфоратор BOSCH BFG 2000</h3>
-                  <p class="old-price visually-hidden">нет цены</p>
+                  <p class="old-price hidden-content">нет цены</p>
                   <p class="new-price">12500 р.</p>
                 </li>
               </ul>
