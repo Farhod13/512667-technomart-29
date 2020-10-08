@@ -259,6 +259,7 @@ img {
 }
 
 .search-field:focus + svg path {
+  opacity: 1.0;
   fill: var(--basic-red);
 }
 
@@ -267,26 +268,38 @@ img {
 }
 
 .search-field:focus::-moz-placeholder + svg path {
+  opacity: 1.0;
   fill: var(--basic-red);
 }
 
 .search-field:focus:-moz-placeholder + svg path {
+  opacity: 1.0;
   fill: var(--basic-red);
 }
 
 .search-field:focus:-ms-input-placeholder + svg path {
+  opacity: 1.0;
   fill: var(--basic-red);
 }
 
 .bookmark-link,
 .basket-link,
 .order-link {
-  padding: 10px 30px;
-  text-align: center;
   font-family: "Cuprum";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.bookmark-link,
+.basket-link {
+  padding: 10px 30px;
+}
+
+.order-link {
+  padding: 10px 0;
 }
 
 .bookmark-link,
