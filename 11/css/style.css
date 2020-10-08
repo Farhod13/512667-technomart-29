@@ -186,71 +186,96 @@ img {
 }
 
 .search-wrapper {
+  position: relative;
   height: 42px;
-  background-color: var(--special-background);
-}
-
-.search-field {
-  padding: 9px 0 9px 42px;
-  font-family: "Cuprum";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--white);
-  border: none;
-  box-sizing: border-box;
-  background-color: var(--special-background);
+  background: var(--special-background);
 }
 
 .search-wrapper > svg {
   position: absolute;
   top: 12px;
-  padding-left: 17px;
-}
-
-.search-wrapper:hover {
-  color: var(--white);
-  background-color: var(--special-background);
+  left: 17px;
 }
 
 .search-wrapper:hover > svg path {
   opacity: 1.0;
 }
 
-.search-wrapper:active > svg path {
-  fill: var(--basic-red);
-}
-
-.search-wrapper:active {
-  color: var(--black);
-  background-color: var(--white);
-}
-
-.search-field:focus,
-.search-field:active {
-  color: var(--black);
-  background-color: var(--white);
-}
-
-.search-field:focus > svg path {
-  fill: var(--basic-red);
+.search-field {
+  padding: 9px 0 9px 42px;
+  width: 100%;
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  color: var(--white);
+  background: var(--special-background);
 }
 
 .search-field::-webkit-input-placeholder {
   color: var(--white);
 }
 
-.search-field:-moz-placeholder {
-  color: var(--white);
-}
- 
 .search-field::-moz-placeholder {
   color: var(--white);
 }
- 
+
+.search-field:-moz-placeholder {
+  color: var(--white);
+}
+
 .search-field:-ms-input-placeholder {
   color: var(--white);
+}
+
+.search-field:focus {
+  color: var(--black);
+  background: var(--white);
+}
+
+.search-field:focus::-webkit-input-placeholder {
+  color: var(--black);
+  background: var(--white);
+}
+
+.search-field:focus::-moz-placeholder {
+  color: var(--black);
+  background: var(--white);
+}
+
+.search-field:focus:-moz-placeholder {
+  color: var(--black);
+  background: var(--white);
+}
+
+.search-field:focus:-ms-input-placeholder {
+  color: var(--black);
+  background: var(--white);
+}
+
+.search-field:focus + svg path {
+  fill: var(--basic-red);
+}
+
+.search-field:focus::-webkit-input-placeholder + svg path {
+  fill: var(--basic-red);
+}
+
+.search-field:focus::-moz-placeholder + svg path {
+  fill: var(--basic-red);
+}
+
+.search-field:focus:-moz-placeholder + svg path {
+  fill: var(--basic-red);
+}
+
+.search-field:focus:-ms-input-placeholder + svg path {
+  fill: var(--basic-red);
 }
 
 .bookmark-link,
