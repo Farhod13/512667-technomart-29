@@ -152,11 +152,7 @@ img {
 
 /* Bar */
 
-.header-bar {
-  background: var(--special-background);
-}
-
-.bar {
+.bar-header {
   min-width: 940px;
   height: 42px;
   background: var(--special-background);
@@ -926,10 +922,26 @@ img {
   opacity: 0;
 }
 
-.filter-checkbox > span:active,
-.filter-checkbox > span:active,
-.filter-radio > span:active,
-.filter-radio > span:active {
+.filter-checkbox > input:disabled ~ span::before,
+.filter-checkbox > input:disabled ~ span::after,
+.filter-radio > input:disabled ~ span::before,
+.filter-radio > input:disabled ~ span::after {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.filter-checkbox > input:disabled ~ span,
+.filter-checkbox > input:disabled ~ span,
+.filter-radio > input:disabled ~ span,
+.filter-radio > input:disabled ~ span {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.filter-checkbox-active > span,
+.filter-checkbox-active > span,
+.filter-radio-active > span,
+.filter-radio-active > span {
   mix-blend-mode: normal;
   opacity: 0.4;
 }
