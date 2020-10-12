@@ -152,11 +152,7 @@ img {
 
 /* Bar */
 
-.header-bar {
-  background: var(--special-background);
-}
-
-.bar {
+.bar-header {
   min-width: 940px;
   height: 42px;
   background: var(--special-background);
@@ -654,6 +650,22 @@ img {
 
 /* Filter */
 
+.main-filter {
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: 220px 700px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.left-filter {
+  width: 220px;
+}
+
+.right-filter {
+  width: 700px;
+}
+
 .filter-title {
   font-family: "PT Sans Bold";
   font-style: normal;
@@ -664,26 +676,119 @@ img {
   color: var(--black);
 }
 
-.main-filter {
-  max-width: 940px;
-  display: grid;
-  grid-template-columns: 240px 700px;
+.filter-content {
+  margin: auto 0;
+  padding-left: 18px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black);
 }
 
-.filter-menu {
-  max-width: 700px;
+.filter-left-menu {
+  display: flex;
+  width: 220px;
+  height: 38px;
+  margin-bottom: 28px;
+  border-radius: 3px;
+  background: #f7f3ec;
+}
+
+.range-filter {
+  width: 220px;
+  margin-bottom: 25px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.range-controls .scale {
+  /*width: 180px;*/
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  /*width: 152px;*/
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border: 8px solid var(--white);
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 158px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  
+}
+
+.price-controls input {
+  width: 75px;
+  padding: 10px;
+  text-align: center;
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  background: #f7f3ec;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.filter-right-menu {
+  margin-bottom: 28px;
+  padding-right: 14px;
+  height: 38px;
   display: grid;
-  grid-template-columns: 120px 100px 100px 140px 140px 120px;
+  grid-template-columns: 220px 2fr 2fr 3fr max-content max-content;
+  gap: 20px;
   align-content: center;
+  border-radius: 3px;
+  background: #f7f3ec;
 }
 
-.filter-menu a {
-  margin-top: auto;
-  margin-bottom: auto;
+.filter-right-menu a {
+  margin: auto 0;
 }
 
-.filter-content,
-.filter-button,
 .filter-link {
   font-family: "PT Sans";
   font-style: normal;
@@ -693,31 +798,57 @@ img {
   text-transform: uppercase;
 }
 
-.filter-content,
-.filter-button,
-.filter-link {
+.filter-link span {
   color: var(--black);
-}
-
-.filter-link {
-  color: var(--black);
-  /*mix-blend-mode: normal;*/
+  mix-blend-mode: normal;
   opacity: 0.3;
-  text-decoration-line: underline;
+  border-bottom: 1px dotted var(--basic-red);
 }
 
-.filter-button {
-  width: 220px;
-  height: 38px;
+.filter-link span:hover {
+  opacity: 1.0;
+  border-bottom: 1px solid var(--basic-red);
+}
+
+.filter-link-active span {
+  border-bottom: none;
+  opacity: 1.0;
+  color: var(--basic-red);
+}
+
+.filter-up ~ svg,
+.filter-down ~ svg {
+  margin: auto 0;
+}
+
+.filter-up + svg:hover path,
+.filter-down + svg:hover path {
+  fill: var(--black);
+}
+
+.filter-dir-active + svg path {
+  fill: var(--basic-red);
 }
 
 .filter-brands,
 .filter-power {
-  padding-bottom: 20px;
+  width: 220px;
+  border-top: 1px solid var(--paginator-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-.filter-brands > div,
-.filter-power > div {
+.filter-checkbox,
+.filter-radio {
+  margin: 10px 0;
+  position: relative;
+}
+
+.filter-checkbox > span,
+.filter-radio > span {
+  padding-left: 35px;
   font-family: "PT Sans";
   font-style: normal;
   font-weight: normal;
@@ -727,19 +858,108 @@ img {
   color: var(--black);
 }
 
-.filter-brands > div > label,
-.filter-power > div > label {
-  padding-left: 5px;
+.filter-checkbox > input ~ span::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
-.filter-link:hover {
-  /*color: var(--black);*/
-  opacity: 1.0;
+.filter-checkbox > input:checked ~ span::before {
+  opacity: 0;
 }
 
-.filter-link:active {
-  color: var(--basic-red);
-  text-decoration-line: none;
+.filter-checkbox > input:checked ~ span::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.filter-radio > input ~ span::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 25px;
+  height: 26px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.filter-radio > input:checked ~ span::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 25px;
+  height: 26px;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.filter-checkbox > input:hover ~ span::before,
+.filter-checkbox > input:hover ~ span::after,
+.filter-radio > input:hover ~ span::before,
+.filter-radio > input:hover ~ span::after {
+  opacity: 0.3;
+}
+
+.filter-checkbox > input:checked:hover ~ span::before,
+.filter-radio > input:checked:hover ~ span::before {
+  opacity: 0;
+}
+
+.filter-checkbox > input:disabled ~ span::before,
+.filter-checkbox > input:disabled ~ span::after,
+.filter-radio > input:disabled ~ span::before,
+.filter-radio > input:disabled ~ span::after {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.filter-checkbox > input:disabled ~ span,
+.filter-checkbox > input:disabled ~ span,
+.filter-radio > input:disabled ~ span,
+.filter-radio > input:disabled ~ span {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.filter-checkbox-active > span,
+.filter-checkbox-active > span,
+.filter-radio-active > span,
+.filter-radio-active > span {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.filter-button {
+  margin-top: 35px;
+  width: 220px;
+  height: 38px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--paginator-border);
+  box-sizing: border-box;
 }
 
 /* Paginator */
