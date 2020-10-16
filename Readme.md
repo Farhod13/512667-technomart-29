@@ -1,6 +1,6 @@
 # Личный проект «Техномарт»
 
-* Студент: [Дмитрий Милютин](https://up.htmlacademy.ru/htmlcss/29/user/512667).
+* Студент: [Farxod Abdullayev](https://up.htmlacademy.ru/htmlcss/29/user/512667).
 * Наставник: [Катерина Чебакова](https://htmlacademy.ru/profile/id1102571).
 
 ---
